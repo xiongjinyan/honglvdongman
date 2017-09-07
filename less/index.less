@@ -1,0 +1,274 @@
+
+ #layout{
+    //限制容器大小最宽为640px，	最小为300px
+    max-width: 640px;
+    min-width:300px;
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+
+	.layout-out{
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		background-color:#f7f7f7;
+		// transtion: all .5s;
+	    //标题栏
+		.title-nav{
+			width: 100%;
+			height: 40px;
+			background-color: #fff;
+			line-height: 40px;
+				>i{
+				font-size: 22px;
+				color: red;
+				font-weight: bold;
+				cursor: pointer;
+					&:first-of-type{
+						float: left;
+						margin-left: 5px;
+					}
+					&:last-of-type{
+						float: right;
+						margin-right: 5px;
+					}
+				}
+			>h2{
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				padding-left: 50px;
+				padding-right: 50px;
+				font-size: 20px;
+				font-weight: bold; 
+				text-align: center;
+			}
+		}
+
+		//轮播区域
+		.swiper-container{
+			width: 100%;
+			height: 188px;
+			background-color: #ccc;
+			>.swiper-wrapper{
+				>.swiper-slide{
+					>a{
+						>img{
+							
+						}
+						>p{
+							position: absolute;
+							width: 100%;
+							height: 20px;
+							line-height: 20px;
+							bottom: 0;
+							padding-left: 10px;
+							background-color: rgba(0,0,0,.6);
+						}
+					}
+				}
+			}
+			.swiper-pagination{
+				bottom:3px;
+				left: 85%;
+				width: 60px;
+				.swiper-pagination-bullet{
+					background-color: #ccc;
+					&.swiper-pagination-bullet-active{
+						background-color: #fff;
+					}
+				}
+			}
+		}
+
+		//主体
+		#list-people{
+			//tab栏
+			.list-nav{
+				height: 42px;
+				>ul{
+					height: 100%;
+					width: 100%;
+					>li{
+						float: left;
+						height: 100%;
+						width: 25%;
+						line-height: 42px;
+						text-align: center;
+						box-sizing: border-box;
+						&.active{
+							border-bottom: 2px solid red;
+						}
+						>a{
+							display: inline-block;
+							font-size: 16px;
+							color: black;
+						}
+					}
+				}
+			}
+
+			//人物列表
+			.people-list{
+				width: 100%;
+				.people-content{
+					width: 50%;
+					height: 267px;
+					box-sizing: border-box;
+					border: 1px solid #ccc;
+					float: left;
+					padding: 10px;
+					>a{
+						display: block;
+						text-align: center;
+						>img{
+						}
+						>p{
+							position: relative;
+							width: 100%;
+							height: 25px;
+							line-height: 25px;
+							text-align: center;
+							margin-top: -25px;
+							font-size: 14px;
+							background-color: rgba(0,0,0,.6);
+						}
+						>h3{
+							margin-top: 5px;
+							color: #666;
+							font-size: 14px;
+						}
+					}
+				}
+			}		
+		}
+	}
+
+	//侧栏
+	.side-list{
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		width: 70%;
+		height: 100%;
+		background-color: #fff;
+		transform:translateX(-100%);
+		transition: all .5s;
+		h1{
+			height: 100px;
+			width: 100%;
+			line-height: 100px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: red;
+			border-bottom: 1px solid #ccc;
+		}
+		a{
+			height: 50px;
+			width: 100%;
+			line-height: 50px;
+			border-bottom: 1px solid #ccc;
+			box-sizing: border-box;
+			display: block;
+			color: #666;
+			font-size: 18px;
+			font-weight: bold;
+			padding-left: 10px;
+			>span{
+				float: right;
+				margin-right: 30px;
+			}
+		} 
+	}
+
+	//模态框
+	.keep-out{
+		position: absolute;
+		z-index: 998;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		display: none;
+	}
+}
+
+
+//连载动漫
+.anime-title,
+.subject-list{
+	height: 40px;
+	background-color: #f7f7f7;
+	box-shadow: 0 0 2px 2px #ccc;
+	margin-bottom: 10px;
+	>i{
+		font-size: 30px;
+		line-height: 40px;
+		color: red;
+		font-weight: bold;
+	}
+	>h1{
+		display: inline-block;
+		position: absolute;
+		line-height: 40px;
+		font-weight: bold;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.anime-list{
+	padding: 0 10px;
+	width: 100%;
+	.people-introduce{
+		margin-top: -5px;
+		width: 100%;
+		>a{
+			
+			>.left{
+				display: inline-block;
+				>img{
+					vertical-align: middle;
+					width: 124px;
+					height: 165px;
+				}
+			}
+			>.right{
+				display: inline-block;
+				line-height: 24px;
+				margin-left: 5px;
+				>h3{
+					display: inline-block;
+					color: #666;
+					font-weight: bold;
+				}
+				>p{
+					color: #666;
+					font-size: 15px;
+				}
+			}						
+		}
+	}
+}
+
+
+//专题列表
+.subject-people{
+	width: 100%;
+	>.subject-introduce{
+		margin: 10px 20px;
+		border-bottom: 1px solid #ccc;
+		>a{
+			>img{
+				width: 600px;
+				height: 200px;
+			}
+			>h3{
+				color: #666;
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
+}

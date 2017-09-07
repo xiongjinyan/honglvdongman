@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>连载动漫</title>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <link rel="stylesheet/less" href="./less/base.less">
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+	<div id="layout">
+		<div class="anime-title">
+			<i class="iconfont icon-back"></i>
+			<h1>连载动漫</h1>
+		</div>
+		<div class="anime-list">
+			<script type='text/html' id="template-anime-list">
+			{{each}}
+				<div class="people-introduce">
+					<a href="{{$value.url}}">
+						<div class="left">
+							<img src="{{$value.img}}" alt="">
+						</div>
+						<div class="right">
+							<h3>{{$value.name}}</h3>
+							<p>{{$value.episode}}</p>
+							<p>{{$value.updateTime}}</p>
+							<p>下载次数：{{$value.downloadCount}}</p>
+						</div>
+					</a>
+				</div>
+			{{/each}}
+			</script>	
+		</div>
+	</div>
+	
+</body>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/swiper/js/swiper.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/lianzaidongman.js"></script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>专题列表</title>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <link rel="stylesheet/less" href="./less/base.less">
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+	<div id="layout">
+		<div class="subject-list">
+			<i class="iconfont icon-back"></i>
+			<h1>专题列表</h1>
+		</div>
+		<div class="subject-people">
+		<script type='text/html' id="template-subject-people">
+			{{each}}	
+				<div class="subject-introduce">
+					<a href="{{$value.url}}">
+						<img src="{{$value.img}}">
+						<h3>{{$value.title}}</h2>
+					</a>
+				</div>
+			{{/each}}
+		</script>		
+		</div>
+	</div>
+	
+</body>
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/swiper/js/swiper.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/zhuantiliebiao.js"></script>

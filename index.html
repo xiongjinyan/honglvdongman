@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <link rel="stylesheet/less" href="./css/base.css">
+    <link rel="stylesheet/less" href="./css/index.css">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <div id="layout">
+        <div class="layout-out">     
+            <div class="layout-main">
+                <!-- 标题栏 -->
+                <div class="title-nav clearfix">
+                    <i class="iconfont icon-category"></i>
+                    <h2>红旅动漫</h2>
+                    <i class="iconfont icon-search"></i>
+                </div>
+
+                <!-- 轮播区域 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <script type='text/type' id="template-swiper-slide">
+                        {{each}}
+                        <div class="swiper-slide">
+                            <a href="{{$value.url}}">
+                                <img src="{{$value.img}}">
+                                <p>{{$value.title}}</p>
+                            </a>
+                        </div>
+                        {{/each}}
+                        </script>
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+                
+                <!-- 主体 -->
+                <section id="list-people">
+                    <!-- tab栏 -->
+                    <div class="list-nav">
+                        <ul class="clearfix">
+                            <li class="active" type="1">
+                                <a href="javascript:void(0)">新增连载</a>
+                            </li>
+                            <li type="2">
+                                <a href="javascript:void(0)">新增完结</a>
+                            </li>
+                            <li type="3">
+                                <a href="javascript:void(0)">推荐连载</a>
+                            </li>
+                            <li type="4">
+                                <a href="javascript:void(0)">推荐完结</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 人物列表 -->
+                    <div class="people-list">
+                        <script type='text/html' id="template-people-list">
+                        {{each}}
+                            <div class="people-content">
+                                <a href="{{$value.url}}">
+                                    <img src="{{$value.img}}">
+                                    <p>{{$value.update}}</p>
+                                    <h3>{{$value.name}}</h3>
+                                </a>
+                            </div>
+                        {{/each}}
+                        </script>    
+                    </div>   
+                </section>
+            </div>
+        </div> 
+        <!-- 侧栏 -->
+        <div class="side-list">
+            <h1>红旅动漫</h1>
+            <a href="./lianzaidongman.html">连载动漫--get<span>></span></a>
+            <a href="./zhuantilibiao.html">专题列表--get<span>></span></a>
+            <a href="javascript:void(0)">关于<span>></span></a>
+        </div>
+
+        <!-- 模态框 -->
+        <div class="keep-out"></div>
+    </div>
+</body>
+
+</html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/swiper/js/swiper.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/index.js"></script>

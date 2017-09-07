@@ -1,0 +1,11 @@
+$.ajax({
+	url:'http://127.0.0.1:9091/api/getlianzai',
+	dataTypt:'json',
+	success:function(data){
+		console.log(data);
+		$('.anime-list').html(template('template-anime-list',data));
+		$('.icon-back').click(function(){
+			history.back();
+		})
+	}
+})
